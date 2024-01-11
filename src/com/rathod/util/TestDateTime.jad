@@ -1,0 +1,29 @@
+// Decompiled by DJ v3.0.0.63 Copyright 2002 Atanas Neshkov  Date: 9/29/05 5:57:00 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   TestDateTime.java
+
+import java.io.PrintStream;
+import java.util.Date;
+
+public class TestDateTime
+{
+
+    public TestDateTime()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        Date date = new Date();
+        System.out.println((new StringBuilder()).append("time is now ").append(date.toString()).toString());
+        System.out.println();
+        try
+        {
+            Thread.sleep(5000L);
+        }
+        catch(Exception exception) { }
+        date.setTime(System.currentTimeMillis());
+        System.out.println((new StringBuilder()).append("time is now ").append(date.toString()).toString());
+    }
+}

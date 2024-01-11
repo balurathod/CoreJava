@@ -1,0 +1,23 @@
+// Decompiled by DJ v3.0.0.63 Copyright 2002 Atanas Neshkov  Date: 9/29/05 6:03:09 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   TestEvent.java
+
+import java.io.PrintStream;
+import java.util.EventObject;
+
+public class TestEvent
+{
+
+    public TestEvent()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        String s = "Jackson";
+        EventObject eventobject = new EventObject(s);
+        System.out.println("" + eventobject.getSource() + " generated the event");
+        System.out.println("the event is: " + eventobject.toString());
+    }
+}

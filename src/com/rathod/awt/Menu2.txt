@@ -1,0 +1,513 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.event.*;
+import javax.swing.*;
+
+public class Menu1 extends JFrame implements ActionListener
+{
+
+	JDesktopPane desktop;
+	JInternalFrame internalFrame;
+	JMenuBar mb;
+	JMenu m1,m2,m3,m4,m5,m6,m61,m7,mp1,mp2;
+	JMenuItem m11,m12,m13,m14,m15,
+		m21,m22,m23,
+		m31,m32,m33,m34,
+		m41,m42,
+		m51,m52,m53,
+		ma,mb1,mc,md,me,		
+		m71,m72,
+		mp11,mp12,mp13,mp14,mp15,
+		mp21,mp22,mp23,
+		b1;
+	private String strings[] = { "Metal", "Motif", "Windows" };
+	private UIManager.LookAndFeelInfo looks[];
+	private JRadioButton r[];
+	private ButtonGroup g;
+	public JPopupMenu p1;
+
+	public Menu1() 
+	{
+	super("Vedisoft : Project Title");
+	setSize(Toolkit.getDefaultToolkit().getScreenSize());
+	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
+	
+	JPanel sp= new JPanel();
+	r = new JRadioButton[ strings.length ];
+	g = new ButtonGroup();
+	ItemHandler h = new ItemHandler();
+	sp.setLayout(  new GridLayout(  r.length ,1) );
+
+	for ( int i = 0; i < r.length; i++ ) 
+	{
+		r[ i ] = new JRadioButton( strings[ i ] );
+		r[ i ].addItemListener( h );
+		g.add( r[ i ] );
+	}
+
+	looks = UIManager.getInstalledLookAndFeels();
+	r[ 1 ].setSelected( true );
+
+	p1=new JPopupMenu();
+
+	mb=new JMenuBar();
+
+	b1=new JMenu("Look and Feel");
+
+	m1=new JMenu("Class1");
+	m2=new JMenu("Class2");
+	m3=new JMenu("Class3");
+	m4=new JMenu("Class4");
+	m5=new JMenu("Class5");
+	m6=new JMenu("Class6");
+	m61= new JMenu("Tree");
+	m7=new JMenu("Class7");
+	mp1=new JMenu("Class1");
+	mp2=new JMenu("Class2");
+
+	m11=new JMenuItem("AlignmentExample");
+	m12=new JMenuItem("ImageLabelDemo");
+	m13=new JMenuItem("MnemonicLabels");
+	m14=new JMenuItem("SimpleJLabelExample");
+	m15= new JMenuItem("EXIT");
+	m21=new JMenuItem("FancyButtonImp");
+	m22=new JMenuItem("Mnemonic");
+	m23= new JMenuItem("EXIT");
+
+	m31=new JMenuItem("ListModelExample");
+	m32=new JMenuItem("MyCheck");
+	m33=new JMenuItem("SimpleList");
+	m34= new JMenuItem("EXIT");
+	m41=new JMenuItem("GridBagDemo");
+	m42=new JMenuItem("LookAndFeelDemo");
+	m51=new JMenuItem("JOptionPaneTest");
+	m52=new JMenuItem("ShowColors");
+	m53= new JMenuItem("SimpleFileChooser");
+	
+	ma= new JMenuItem("TestDMN");
+	mb1= new JMenuItem("TestDTM");
+	mc= new JMenuItem("TestJTree");
+	md= new JMenuItem("TestColumnModel");
+	me= new JMenuItem("TestJTable");
+
+	m71=new JMenuItem("SplashScreen");
+	m72= new JMenuItem("SimpleInternalFrame");
+	mp11=new JMenuItem("AlignmentExample");
+	mp12=new JMenuItem("ImageLabelDemo");
+	mp13=new JMenuItem("MnemonicLabels");
+	mp14=new JMenuItem("SimpleJLabelExample");
+	mp15= new JMenuItem("EXIT");
+	mp21=new JMenuItem("FancyButtonImp");
+	mp22=new JMenuItem("Mnemonic");
+	mp23= new JMenuItem("EXIT");
+
+	m1.setMnemonic('m');
+	m11.setMnemonic('1');
+	m12.setMnemonic('2');
+	m13.setMnemonic('3');
+	m14.setMnemonic('4');
+	m15.setMnemonic('x');
+
+	
+	KeyStroke Ks1=KeyStroke.getKeyStroke(KeyEvent.VK_1,Event.CTRL_MASK);
+	KeyStroke Ks2=KeyStroke.getKeyStroke(KeyEvent.VK_2,Event.CTRL_MASK);
+	KeyStroke Ks3=KeyStroke.getKeyStroke(KeyEvent.VK_3,Event.CTRL_MASK);
+	KeyStroke Ks4=KeyStroke.getKeyStroke(KeyEvent.VK_4,Event.CTRL_MASK);
+	KeyStroke Ks5=KeyStroke.getKeyStroke(KeyEvent.VK_X,Event.CTRL_MASK);
+
+	m11.setAccelerator(Ks1);
+	m12.setAccelerator(Ks2);
+	m13.setAccelerator(Ks3);
+	m14.setAccelerator(Ks4);
+	m15.setAccelerator(Ks5);
+
+	m61.add(ma);
+	m61.add(mb1);
+	m61.add(mc);
+	m61.add(md);
+	m61.add(me);
+
+	b1.add(r[ 0 ]);
+	b1.add(r[ 1 ]);
+	b1.add(r[ 2 ]);
+
+	m1.add(m11);
+	m1.add(m12);
+	m1.add(m13);
+	m1.add(m14);
+	m1.addSeparator();
+	m1.add(m15);
+	
+	m2.add(m21);
+	m2.add(m22);
+	m2.addSeparator();
+	m2.add(m23);
+
+	m3.add(m31);
+	m3.add(m32);
+	m3.add(m33);
+	m3.addSeparator();
+	m3.add(m34);
+
+	m4.add(m41);
+	m4.add(m42);
+
+	m5.add(m51);
+	m5.add(m52);
+	m5.add(m53);
+
+	m6.add(m61);
+
+	m7.add(m71);
+	m7.add(m72);
+
+	mp1.add(mp11);
+	mp1.add(mp12);
+	mp1.add(mp13);
+	mp1.add(mp14);
+	mp1.addSeparator();
+	mp1.add(mp15);
+	
+	mp2.add(mp21);
+	mp2.add(mp22);
+	mp2.addSeparator();
+	mp2.add(mp23);
+
+	
+	m11.addActionListener(this);
+	m12.addActionListener(this);
+	m13.addActionListener(this);
+	m14.addActionListener(this);
+	m15.addActionListener(this);
+	
+	m21.addActionListener(this);
+	m22.addActionListener(this);
+	m23.addActionListener(this);
+
+	m31.addActionListener(this);
+	m32.addActionListener(this);
+	m33.addActionListener(this);
+	m34.addActionListener(this);
+
+	m41.addActionListener(this);
+	m42.addActionListener(this);
+
+	m51.addActionListener(this);
+	m52.addActionListener(this);
+	m53.addActionListener(this);
+
+	ma.addActionListener(this);
+	mb1.addActionListener(this);
+	mc.addActionListener(this);
+	md.addActionListener(this);
+	me.addActionListener(this);
+
+	m71.addActionListener(this);
+	m72.addActionListener(this);
+	mp11.addActionListener(this);
+	mp12.addActionListener(this);
+	mp13.addActionListener(this);
+	mp14.addActionListener(this);
+	mp15.addActionListener(this);
+	
+	mp21.addActionListener(this);
+	mp22.addActionListener(this);
+	mp23.addActionListener(this);
+
+	mb.add(m1);
+	mb.add(m2);
+	mb.add(m3);
+	mb.add(m4);
+	mb.add(m5);
+	mb.add(m6);
+	mb.add(m7);
+	mb.add(b1);
+
+	setJMenuBar(mb);
+
+	desktop = new JDesktopPane();
+	desktop.setOpaque(true);
+	add(desktop, BorderLayout.CENTER);
+
+
+	ImageIcon ii = new ImageIcon("images/logo.gif");
+	setIconImage(ii.getImage());
+
+	p1.add(mp1);
+	p1.add(mp2);
+	addMouseListener(new PL());
+
+
+
+	JLabel lbl = new JLabel(new ImageIcon("images/vedisoft.jpg"));
+	int width = 410;
+	int height =230;
+	Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+	int x = (screen.width-width)/2;
+	int y = (screen.height-height)/2;
+	lbl.setBounds(x,y,width,height);
+	desktop.add(lbl, Integer.MIN_VALUE);
+
+	}
+
+	public void actionPerformed(ActionEvent e)
+	{
+		String s=e.getActionCommand();
+		if(s=="EXIT")
+		{
+			dispose();
+			System.exit(0);
+		}
+		
+		if(s.equals("AlignmentExample"))
+		{
+			internalFrame=new JInternalFrame("AlignmentExample",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new AlignmentExample());
+			desktop.add(internalFrame);
+			internalFrame.setVisible(true);
+		}
+		if(s.equals("ImageLabelDemo"))
+		{
+			internalFrame=new JInternalFrame("ImageLabelDemo",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new ImageLabelDemo());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+
+		if(s.equals("MnemonicLabels"))
+		{
+			internalFrame=new JInternalFrame("MnemonicLabels",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new MnemonicLabels());
+			desktop.add(internalFrame);
+			internalFrame.setVisible(true);
+		}
+		if(s.equals("SimpleJLabelExample"))
+		{
+			internalFrame=new JInternalFrame("SimpleJLabelExample",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new MnemonicLabels());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+		if(s.equals("FancyButtonImp"))
+		{
+			internalFrame=new JInternalFrame("FancyButtonImp",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new FancyButtonImp());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+
+		if(s.equals("Mnemonic"))
+		{
+			internalFrame=new JInternalFrame("Mnemonic",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new Mnemonic());
+			desktop.add(internalFrame);
+			internalFrame.setVisible(true);
+		}
+
+		if(s.equals("ListModelExample"))
+		{
+			internalFrame=new JInternalFrame("ListModelExample",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new ListModelExample());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+
+		if(s.equals("MyCheck"))
+		{
+			internalFrame=new JInternalFrame("MyCheck",true,true,true,true);
+			internalFrame.setBounds(0,0,500,600);
+			internalFrame.setContentPane(new MyCheck());
+			desktop.add(internalFrame);
+			internalFrame.setVisible(true);
+		}
+
+		if(s.equals("SimpleList"))
+		{
+			internalFrame=new JInternalFrame("SimpleList",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new SimpleList());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+
+		if(s.equals("GridBagDemo"))
+		{
+			internalFrame=new JInternalFrame("GridBagDemo",true,true,true,true);
+			internalFrame.setBounds(0,0,500,600);
+			internalFrame.setContentPane(new GridBagDemo());
+			desktop.add(internalFrame);
+			internalFrame.setVisible(true);
+		}
+
+		if(s.equals("LookAndFeelDemo"))
+		{
+			internalFrame=new JInternalFrame("LookAndFeelDemo",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new LookAndFeelDemo());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+
+		if(s.equals("JOptionPaneTest"))
+		{
+			internalFrame=new JInternalFrame("JOptionPaneTest",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new JOptionPaneTest());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+
+		if(s.equals("ShowColors"))
+		{
+			internalFrame=new JInternalFrame("ShowColors",true,true,true,true);
+			internalFrame.setBounds(0,0,500,600);
+			internalFrame.setContentPane(new ShowColors());
+			desktop.add(internalFrame);
+			internalFrame.setVisible(true);
+		}
+
+
+		if(s.equals("TestDMN"))
+		{
+			internalFrame=new JInternalFrame("TestDMN",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new TestDMN());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+
+
+		if(s.equals("TestDTM"))
+		{
+			internalFrame=new JInternalFrame("TestDTM",true,true,true,true);
+			internalFrame.setBounds(0,0,500,600);
+			internalFrame.setContentPane(new TestDTM());
+			desktop.add(internalFrame);
+			internalFrame.setVisible(true);
+		}
+
+		if(s.equals("TestJTree"))
+		{
+			internalFrame=new JInternalFrame("TestJTree",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new TestJTree());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+
+		if(s.equals("TestColumnModel"))
+		{
+			internalFrame=new JInternalFrame("TestColumnModel",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new TestColumnModel());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+
+		if(s.equals("TestJTable"))
+		{
+			internalFrame=new JInternalFrame("TestJTable",true,true,true,true);
+			internalFrame.setBounds(0,0,500,600);
+			internalFrame.setContentPane(new TestJTable());
+			desktop.add(internalFrame);
+			internalFrame.setVisible(true);
+		}
+
+		if(s.equals("SimpleFileChooser"))
+		{
+			internalFrame=new JInternalFrame("SimpleFileChooser",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new SimpleFileChooser());
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+		}
+
+		if(s.equals("SimpleInternalFrame"))
+		{
+			internalFrame=new JInternalFrame("SimpleInternalFrame",true,true,true,true);
+			internalFrame.setBounds(0,0,500,600);
+			internalFrame.setContentPane(new SimpleInternalFrame());
+			desktop.add(internalFrame);
+			internalFrame.setVisible(true);
+		}
+
+/*		if(s.equals("SplashScreen"))
+		{
+			internalFrame=new JInternalFrame("SplashScreen",true,true,true,true);
+			internalFrame.setBounds(0,0,500,400);
+			internalFrame.setContentPane(new SplashScreen(100000));
+			internalFrame.setVisible(true);
+			desktop.add(internalFrame);
+
+		}*/
+
+
+	}
+
+	private void changeTheLookAndFeel( int value )
+	{
+		try
+		 {
+			UIManager.setLookAndFeel( looks[ value ].getClassName() );
+			SwingUtilities.updateComponentTreeUI( this );
+		}
+		 catch ( Exception e ) 
+		{
+			e.printStackTrace();
+		}
+	}
+
+
+private class ItemHandler implements ItemListener 
+{
+	public void itemStateChanged( ItemEvent e )
+	{
+
+		for ( int i = 0; i < r.length; i++ )
+		if ( r[ i ].isSelected() ) 
+		{
+			changeTheLookAndFeel( i );
+		}
+	}
+}
+
+
+
+		public static void main(String args[]) 
+		{
+			Menu1 sif = new Menu1();
+			sif.setVisible(true);
+		}
+
+class PL extends MouseAdapter
+{
+	public void mousePressed(MouseEvent e)
+	{
+		checkPopup(e);
+	}
+	public void mouseClicked(MouseEvent e)
+	{
+		checkPopup(e);
+	}
+	public void mouseReleased(MouseEvent e)
+	{
+		checkPopup(e);
+	}
+	private void checkPopup(MouseEvent e)
+	{
+		  if(e.isPopupTrigger())
+		{
+		p1.show(Menu1.this,e.getX(),e.getY());
+		}
+	}
+}
+
+}
+

@@ -1,0 +1,72 @@
+/*	Label
+	Objective : To display Text
+
+	Constructors:
+	Label()
+	Label(String text)
+	Label(String text, int alignmnet)
+	alignment can be  Label.LEFT, Label.RIGHT, Label.CENTER
+
+	Methods
+	setText(String)
+	String getText()
+	setAlignment(int)
+	int getAlignment()	
+
+	TextField
+Objective: To accept one line text
+
+	Constructors
+	TextField()
+	TextField(int columns)
+	TextField(String defaulttext)
+	TextField(Sting text, int cols)
+Eg.	TextField tf =  new TextField("Bhopal",10)
+	Methods
+	setText(String)
+	String getText()
+	setColumns(int)
+	int getColumns()
+	setEchoChar(char)
+	char getEchoChar()
+	
+	TextField tf = new TextField();
+	tf.setEchoChar('*');
+
+	TextArea
+Objective :To accept multi-line text
+	Constructors
+	TextArea()
+	TextArea(int rows,int cols)
+	TextArea(String text)
+TextArea(String text,int rows,int cols)
+
+	setText(String)
+	String getText()
+	setRows(int)
+	int getRows()
+	setColumns(int)
+	int getColumns()
+	append(String)
+	insert(String,int pos)
+
+	Button
+	Objective : to take an action
+
+	Contructors
+	Button()
+	Button(String cap)
+	
+	Methods
+	
+	setText(String)
+	String getText()
+
+	setActionCommand(String)
+	Sets the action command, value can be retrieved using get action command
+
+	addActionListener(class which inplements ActionListener)
+
+
+Listener	: 	ActionListener
+	public void actionPerformed(ActionEvent ae){}

@@ -1,0 +1,42 @@
+import java.awt.*;
+import javax.swing.*;
+public class FancyButton extends JButton
+{
+	public FancyButton(Icon icon,Icon pressed,Icon rollover)
+	{
+		super(icon);
+		setFocusPainted(false);
+		setRolloverEnabled(true);
+		setPressedIcon(pressed);
+		setRolloverIcon(rollover);
+		setBorderPainted(false);
+		setContentAreaFilled(false);
+	}
+	public static void main(String args[])
+	{
+	FancyButton b1 = new FancyButton(new ImageIcon("images/d1.gif"),new ImageIcon("images/d2.gif"),new ImageIcon("images/d3.gif"));
+	FancyButton b2 = new FancyButton(new ImageIcon("images/a1.gif"),new ImageIcon("images/a2.gif"),new ImageIcon("images/a3.gif"));
+
+	JFrame f = new JFrame();
+	f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	Container c = f.getContentPane();
+	c.setLayout(new FlowLayout());
+	c.add(b1);
+	c.add(b2);
+	f.pack();
+	f.setVisible(true);
+	
+	}
+}
+
+/* 
+Vedisoft : Java - Module 1 "Desktop Technologies"
+
+
+Vedisoft
+Plot No. 173, Zone II, M.P. Nagar,
+Bhopal.
+Phone : 0755 - 6541546
+Email : contact@vedisoft.com
+Web : www.vedisoft.com
+*/

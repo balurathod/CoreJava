@@ -1,0 +1,51 @@
+	CheckBox
+	To select one or more options
+	Constructors
+	CheckBox()
+	CheckBox(String cap)
+CheckBox(String cap, boolean state)
+CheckBox(String cap, boolean state,CheckBoxGroup)
+	
+	setText(String)
+	String getText()
+	setState(boolean)
+	boolean getState()
+	setCheckBoxGroup(CheckBoxGroup)
+CheckBoxGroup getCheckBoxGroup()
+
+	Listeners: ItemListener
+	public void itemStateChanged(ItemEvent ie){}
+	
+Checkbox a = new Checkbox("Reading");
+Checkbox b = new Checkbox("music",true);
+
+CheckboxGroup cbg = new CheckboxGroup();
+Checkbox m = new Checkbox("Male",true,cbg);
+Checkbox f = new Checkbox("Female",false,cbg);
+
+
+	List
+	To Select single/multiple options
+
+	List()
+	
+	add(String)
+	insert(String,int index)
+	remove(int index)
+	clear()
+	remove(String)
+	String get(int index)
+	int getSelectedIndex()
+	String getSelectedItem()
+	int[] getSelectedIndices()
+	String[] getSelectedItems()
+	int getItemCount()
+	setMultiMode(boolean)
+	boolean getMultiMode()
+	
+	
+
+
+
+
+

@@ -1,0 +1,24 @@
+// Decompiled by DJ v3.0.0.63 Copyright 2002 Atanas Neshkov  Date: 30-09-2005 12:40:07 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   TestCalLenient.java
+
+import java.io.PrintStream;
+import java.util.Calendar;
+
+public class TestCalLenient
+{
+
+    public TestCalLenient()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        Calendar calendar = Calendar.getInstance();
+        System.out.println("date is " + calendar.get(5));
+        calendar.setLenient(false);
+        calendar.set(5, 36);
+        System.out.println("date is now " + calendar.get(5));
+    }
+}

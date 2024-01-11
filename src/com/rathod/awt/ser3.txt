@@ -1,0 +1,148 @@
+JSP has 3  main capabilities of including and external pieces in JSP document:
+1. The jsp:include action (text/html/jsp)
+2. The include directive (text/html/jsp)
+3. The jsp:plugin action (applet)
+
+The jsp:include action
+
+a. The content of HTML page
+b. The content of plain text document
+c. The output of JSP page
+d. The output of Servlet
+
+NOTE : The page is included at the time of request
+Syntax
+
+<jsp:include page="relative path of the resource" />
+
+Or
+<jsp:include page="relative path of the resource" > </jsp:include>
+
+Attribute :
+page* : specifies the external page to be includes
+flush(optional): default value is false
+	specifies whether buffer should be flushed before 	inclusion
+
+Example:
+	WhatsNew.jsp
+	Uses : Item1.html,Item2.html and Item3.html
+
+The Param element
+
+<jsp:include page="StadardHeadings.jsp">
+<jsp:param name="bgColor" value="Yellow">
+</jsp:include>
+
+
+In the RequestedPage :StandardHeadings.jsp
+
+String str = request.getParameter("bgColor");
+
+The Include Directive
+Note : The page is included at the time of page translation.
+
+
+<%@ include file="Relative URL" %>
+
+
+Differences between jsp:inlude action and include directive
+		jsp:include		include
+		action		directive
+
+Basic Syntax	<jsp:include>	<%@ include
+		</jsp:include>	%>
+
+Inclusion time	Request		Translation
+
+What is included ?	Output		Actual content 				of file
+How many servlets
+result ?		Two		One
+
+Can included page	No		Yes
+set response headers ?
+
+Can included page 	No		Yes
+define fields or 
+methods that
+main page use
+
+Does main page needs	No		Yes
+to be updated when 
+included page change ?
+
+What is equivalent in
+servlet		include method	None
+		of 
+		RequestDispatcher
+
+Example: Reusing Footers
+
+SomeRandomPage.jsp
+	makes use of ContactSection.jsp
+
+Forwarding Request with jsp:forward
+
+<% String destination
+	if(Math.random()>.5)
+	{
+		destination = " Page1.jsp"
+	}
+	else
+	{
+		destination = " Page1.jsp"
+	}
+%>
+<jsp:forward page="<%= destination> " />
+
+The jsp:plugin element
+
+Example
+<jsp:plugin type="applet"
+	code="SomeApplet.class"
+	height=400 width=400>
+</jsp:plugin>	
+
+Attributes:
+type: applet,bean
+code
+width
+height
+
+The param element
+The params element
+
+<jsp:plugin type="applet"
+	code="SomeApplet.class"
+	height=400 width=400>
+	<jsp:params>
+<jsp:param name="Param1" Value="Value1"/>
+<jsp:param name="Param1" Value="Value1"/>
+	</jsp:params>
+</jsp:plugin>	
+
+The fallback element
+
+Example
+<jsp:plugin type="applet"
+	code="SomeApplet.class"
+	height=400 width=400>
+<jsp:fallback> 
+<b> This example requires Java</b>
+</jsp:fallback>
+</jsp:plugin>	
+
+Note while calling an Applet the class file of applet should not be stored in web-inf directory
+Example : PluginApplet.jsp
+
+
+
+
+
+
+
+
+
+
+
+
+

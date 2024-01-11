@@ -1,0 +1,8 @@
+Class 2 AWT :
+
+1. Life Cycle of An Applet
+2. Passing Parameters from HTML to Applet
+3. Color Class (ColorApplet)
+4. Font Class (fonts)
+5. Calling Images In Applet (ImageDemo)
+6. Clipping (Clipper.java)

@@ -1,0 +1,13 @@
+1900
+true
+Welcome to Java
+1900
+G
+1234
+1900000
+123.89
+1.2345647567667E8
+java.io.FileOutputStream@6eb38a
+
+
+10
