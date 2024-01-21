@@ -1,7 +1,7 @@
 package com.rathod.assignments.faq;
 
-import com.rathod.java8.InterfaceWithDefaultStaticMtd;
-import com.rathod.java8.InterfaceWithDefaultStaticMtds;
+import com.rathod.JavaFeaturesVersionwise.java8.InterfaceWithDefaultStaticMtd;
+import com.rathod.JavaFeaturesVersionwise.java8.InterfaceWithDefaultStaticMtds;
 
 public class MainMethodEx implements InterfaceWithDefaultStaticMtd, InterfaceWithDefaultStaticMtds  {
 

@@ -1,4 +1,4 @@
-package com.rathod.java8;
+package com.rathod.JavaFeaturesVersionwise.java8;
 //A Java program to demonstrate simple lambda expressions 
 import java.util.ArrayList;
 import java.util.Arrays;

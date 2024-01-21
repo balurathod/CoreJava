@@ -1,4 +1,4 @@
-package com.rathod.JavaFeaturesVersionwise.java8;
+package com.rathod.assignments;
 
 // i/p  --> Object[] array = { 1, 2, new Object[]{ 3, 4, new Object[]{ 5 }, 6, 7 }, 8, 9, 10 };
 // o/p  --> Object[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };

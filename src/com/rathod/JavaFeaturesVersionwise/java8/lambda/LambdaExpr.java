@@ -1,4 +1,4 @@
-package com.rathod.java8;
+package com.rathod.JavaFeaturesVersionwise.java8;
 	// Java program to demonstrate lambda expressions to implement a user defined functional interface. 
 	  
 	// A sample functional interface (An interface with single abstract method 

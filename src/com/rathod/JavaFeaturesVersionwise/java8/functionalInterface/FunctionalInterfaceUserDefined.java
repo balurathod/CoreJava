@@ -1,4 +1,4 @@
-package com.rathod.java8;
+package com.rathod.JavaFeaturesVersionwise.java8;
 
 	// Java program to demonstrate lamda expressions to implement 
 	// a user defined functional interface. 

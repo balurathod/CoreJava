@@ -1,4 +1,4 @@
-package com.rathod.java8;
+package com.rathod.JavaFeaturesVersionwise.java8;
 
 	
 // A simple program to demonstrate the use of predicate interface 
@@ -35,7 +35,7 @@ public class FunIntfcUsePredicate {
 	Important Points/Observations:
 
 	A functional interface has only one abstract method but it can have multiple default methods.
-	@FunctionalInterface annotation is used to ensure an interface can’t have more than one abstract method. The use of this annotation is optional.
+	@FunctionalInterface annotation is used to ensure an interface canï¿½t have more than one abstract method. The use of this annotation is optional.
 	The java.util.function package contains many builtin functional interfaces in Java 8.
 	
 	*/

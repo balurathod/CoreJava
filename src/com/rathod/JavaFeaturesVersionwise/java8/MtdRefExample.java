@@ -1,4 +1,4 @@
-package com.rathod.java8;
+package com.rathod.JavaFeaturesVersionwise.java8;
 //https://www.javatpoint.com/java-8-method-reference
 import java.util.function.BiFunction;  
 

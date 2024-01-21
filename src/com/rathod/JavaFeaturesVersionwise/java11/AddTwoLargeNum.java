@@ -1,4 +1,4 @@
-package com.rathod.java11;
+package com.rathod.JavaFeaturesVersionwise.java11;
 // Use this editor to write, compile and run your Java code online
 
 import java.math.BigInteger;

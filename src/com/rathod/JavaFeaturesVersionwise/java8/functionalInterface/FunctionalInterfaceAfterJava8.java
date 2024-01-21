@@ -1,4 +1,4 @@
-package com.rathod.java8;
+package com.rathod.JavaFeaturesVersionwise.java8;
 
 public class FunctionalInterfaceAfterJava8 {
 	// Java program to demonstrate Implementation of 

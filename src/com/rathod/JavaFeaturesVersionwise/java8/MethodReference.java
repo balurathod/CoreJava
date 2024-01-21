@@ -1,4 +1,4 @@
-package com.rathod.java8;
+package com.rathod.JavaFeaturesVersionwise.java8;
 //In the following example, we have defined a functional interface and referring a static method 
 //to it's functional method say().
 interface Sayable{  

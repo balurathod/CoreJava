@@ -1,4 +1,4 @@
-package com.rathod.java11;
+package com.rathod.JavaFeaturesVersionwise.java11;
 
 // Importing required classes
 import java.io.BufferedReader;

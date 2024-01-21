@@ -1,4 +1,4 @@
-package com.rathod.java8;
+package com.rathod.JavaFeaturesVersionwise.java8;
 //In the following example, we are using predefined functional interface Runnable to refer static method.
 
 public class FunIntrfcReferPreDefndToStaticMtd {

@@ -1,14 +1,14 @@
 package com.rathod.assignments;
 
 // let array = [1,2,3
-// 4,5,6
-// 7,8,9];  find out diagonal value 3 5 7
+//              4,5,6
+//              7,8,9];  find out diagonal value 3 5 7
 
 
 // Java Program to Find the Sum of Diagonals of a Matrix
 
 // Importing input output classes
-import java.io.*;
+
 
 // Main Class
 public class SumOfDiagonalMarix {

@@ -40,7 +40,6 @@ public class Add2Matrix {
 	      {
 	         for ( d = 0 ; d < cols ; d++ )
 	         System.out.print(sum[c][d]+"\t");
-	         System.out.println();
 	      }
 	   }
 }

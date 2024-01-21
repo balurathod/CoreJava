@@ -1,4 +1,4 @@
-package com.rathod.java11;
+package com.rathod.JavaFeaturesVersionwise.java11;
 
 import java.util.ArrayList;
 import java.util.Arrays;

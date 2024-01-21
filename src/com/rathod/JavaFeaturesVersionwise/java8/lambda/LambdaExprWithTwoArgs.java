@@ -1,4 +1,4 @@
-package com.rathod.java8;
+package com.rathod.JavaFeaturesVersionwise.java8;
 
 	// Java program to demonstrate working of lambda expressions 
 public class LambdaExprWithTwoArgs {

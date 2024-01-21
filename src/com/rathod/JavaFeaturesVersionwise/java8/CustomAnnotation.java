@@ -1,4 +1,4 @@
-package com.rathod.java8;
+package com.rathod.JavaFeaturesVersionwise.java8;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

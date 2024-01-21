@@ -1,8 +1,5 @@
 package com.rathod.exceptionHandling;
 import java.io.*;
-import java.security.PublicKey;
-
-import com.rathod.assignments.faq.Main;
 
 public class CheckedExcpcn {
 
